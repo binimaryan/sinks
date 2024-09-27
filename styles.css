@@ -1,27 +1,17 @@
-/* Outdated CSS */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lora', serif;
     margin: 0;
     padding: 0;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 p {
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 img {
@@ -29,7 +19,65 @@ img {
     height: auto;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+/* Layout Styles */
+header {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Grid Layout for Main Content */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Footer */
+footer {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
