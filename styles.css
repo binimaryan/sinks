@@ -1,36 +1,49 @@
 body {
-    font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
+    background-color: #faf3f3;
+    color: #4a3b3b;
     margin: 0;
     padding: 0;
 }
 
-h1, h2 {
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #b87d7d;
     margin: 0;
-    padding: 10px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #b87d7d;
 }
 
 p {
-    margin: 0;
-    padding: 10px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #4a3b3b;
 }
 
 img {
     width: 100%;
     height: auto;
+    border-radius: 12px;
 }
 
-/* Layout Styles */
 header {
-    background-color: #cccccc;
+    background-color: #ffe3e3;
     text-align: center;
-    padding: 20px;
+    padding: 60px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 nav {
-    background-color: #333333;
-    color: white;
+    background-color: #f9dcdc;
+    color: #4a3b3b;
     text-align: center;
-    padding: 15px;
+    padding: 20px 0;
+    border-bottom: 2px solid #e3c5c5;
 }
 
 nav ul {
@@ -38,41 +51,58 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 25px;
 }
 
 nav ul li a {
-    color: white;
+    color: #4a3b3b;
     text-decoration: none;
-    padding: 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: 'Playfair Display', serif;
+}
+
+nav ul li a:hover {
+    color: #b87d7d;
+    text-decoration: underline;
 }
 
 main {
-    padding: 20px;
+    padding: 40px;
 }
 
-/* Grid Layout for Main Content */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
 }
 
 .grid-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
+    background-color: #fff5f5;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ffe3e3;
 }
 
-/* Footer */
+.grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
 footer {
-    background-color: #cccccc;
+    background-color: #ffe3e3;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #4a3b3b;
+    border-top: 2px solid #e3c5c5;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     nav ul {
         flex-direction: column;
     }
